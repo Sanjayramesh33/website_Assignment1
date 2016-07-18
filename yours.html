@@ -1,0 +1,72 @@
+<html>
+
+<head>
+<title>Your Reviews</title>
+<link href="styleex.css" type="text/css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+</head>
+
+<body>
+<div id="main">
+<div id="logo">
+   <img src="https://pixabay.com/static/uploads/photo/2014/04/03/10/11/gear-310102_960_720.png"width="100"height="100"alt="logo"title="Top Gear"/>
+<h1>
+
+Post your Reviews</h1> 
+<hr>
+
+    <div id="sidebar">
+      <div id="menu">
+	  <ul>
+	      <li><h2><a href= "index.html">Home</a></h2></li>
+	      	     
+	  </ul>
+      </div>
+    </div>
+	
+<div id="content">
+
+<p><h2>
+CONTACT US
+</h2></p>
+<img src="https://www.msmmvc.com/Portals/0/Images/Cars2.jpg" width="300" height="200"
+<p>
+
+<h3>Mail your suggestions/feedback to:
+editor@topgear.com</h3>
+<hr>
+<h3>For any other inquiries: mail us at:
+info@topgear.com</h3>
+<h3> Please post your reviews below</h3>
+<textarea  id="text" cols="80" rows="5" placeholder="Please submit your reviews with atleast 10 letters."></textarea>
+<p id="demo"></p>
+<button type="button" onclick="myFunction()">Submit</button>
+<br>
+<p id="reviews"></p>
+</p>
+
+<hr>
+
+</div>
+<script>
+	function myFunction() {
+	    var x, text;
+	    x = document.getElementById("text").value;
+	    if (isNaN(x) && x.length>10 ) {
+	        text = "Input  valid";
+	        $("#demo").css('color', 'black');
+	        showReview();
+	    } else if(x.length<10){
+	        text = "Input invalid";
+	        $("#demo").css('color', 'red');
+	    }
+	    document.getElementById("demo").innerHTML = text
+	};
+
+	function showReview(){
+		document.getElementById("recipes").innerHTML = document.getElementById("text").value;
+	};
+</script>
+</body>
+
+</html>
